@@ -5,23 +5,34 @@ Users can view, delete, and search their favorite quotes easily.
 
  # **Features** 
 
- **Home Screen** 
-  •Shows a random motivational quote from a hardcoded list (10+ quotes)
+ **Home Screen**
 
-• Get New Quote button to generate a new quote
+• Displays a random inspirational quote
 
- • Save to Favorites button
+• Shows quote author
+
+• “New Quote” button to generate a random quote
+
+• “Save to Favorites” button
+
+• Prevents duplicate favorites
 
 **Favorites Screen** 
- • Displays all saved quotes
+• View all saved favorite quotes
 
- • Option to delete any quote
+• Search bar to filter favorite quotes
 
- • Shows message when favorites list is empty
+• Remove quotes from favorites
+
+• Favorites persist even after app restart
 
 **Navigation** 
 Uses BottomNavigationBar to switch between:Home and Favorites.
 
+Local Storage - Uses SharedPreferences to persist favorite quotes
+
+ **Tech Stack -** Flutter, Dart, Provider (State Management),SharedPreferences (Local Storage)
+ 
  # **Architecture**
 
 Model → Quote (id, text, author) , 
@@ -30,9 +41,14 @@ State Management → Provider
 Folder Structure - 
 lib/
  ├── models/
+ │    └── quote.dart
  ├── providers/
+ │    └── quote_provider.dart
  ├── screens/
- └── widgets/
+ │    ├── home_screen.dart
+ │    └── favorite_screen.dart
+ └── main.dart
+
 
 # **Setup Instructions**
 
@@ -61,6 +77,15 @@ Start emulator
 flutter pub get
 
 flutter run
+
+**Testing** - This project includes unit tests and widget tests.
+
+- `quote_provider_test.dart` – Unit tests for QuoteProvider logic
+- `home_screen_test.dart` –  Widget tests for Home Screen UI
+
+**Run Tests** - ```bash,flutter test
+
+
 
 # **Screenshots**
 
