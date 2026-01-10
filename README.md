@@ -83,8 +83,7 @@ flutter run
 - `quote_provider_test.dart` – Unit tests for QuoteProvider logic
 - `home_screen_test.dart` –  Widget tests for Home Screen UI
 
-**Run Tests** - ```bash,flutter test
-
+**Run Tests** - ```bash,flutter test - This command runs all unit and widget tests in the test/ folder and verifies that the app works correctly.
 
 
 # **Screenshots**
@@ -98,10 +97,17 @@ flutter run
 ![Home](https://github.com/user-attachments/assets/4870de75-383b-40be-bed7-b17094ac8ae2)
 
 
+### Extra Features
+• Prevented duplicate quotes from being added to Favorites.
 
-# **Extra Features:**
-• Favorites persistence using SharedPreferences
-• Search bar in Favorites to filter quotes
+• Favorites are persisted using SharedPreferences (saved even after app restart).
+
+• Added search functionality in Favorites to filter quotes.
+
+• Bottom navigation bar for smooth navigation between Home and Favorites.
+
+• Unit and widget tests for core functionality.
+
 
 
 
