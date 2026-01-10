@@ -16,6 +16,19 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
   Widget build(BuildContext context) {
     final provider = Provider.of<QuoteProvider>(context);
 
+    //  CASE 1: No favorites at all
+    if (provider.favorites.isEmpty) {
+      return const Scaffold(
+        body: Center(
+          child: Text(
+            "No favourites yet",
+            style: TextStyle(fontSize: 16, color: Colors.grey),
+          ),
+        ),
+      );
+    }
+
+    //  Filter favorites based on search
     final filteredQuotes = provider.favorites.where((quote) {
       return quote.text.toLowerCase().contains(searchText) ||
           quote.author.toLowerCase().contains(searchText);
@@ -25,8 +38,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
       appBar: AppBar(title: const Text('Favorites')),
       body: Column(
         children: [
-
-          // 🔍 SEARCH BAR
+          //  SEARCH BAR
           Padding(
             padding: const EdgeInsets.all(12),
             child: TextField(
@@ -45,10 +57,15 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
             ),
           ),
 
-          // LIST
+          //  LIST / EMPTY SEARCH RESULT
           Expanded(
             child: filteredQuotes.isEmpty
-                ? const Center(child: Text('No matching quotes'))
+                ? const Center(
+                    child: Text(
+                      "No matching quotes",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  )
                 : ListView.builder(
                     itemCount: filteredQuotes.length,
                     itemBuilder: (context, index) {
