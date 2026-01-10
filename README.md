@@ -17,6 +17,8 @@ Users can view, delete, and search their favorite quotes easily.
 
 • Prevents duplicate favorites
 
+• Share quotes using the system share option
+
 **Favorites Screen** 
 • View all saved favorite quotes
 
@@ -24,7 +26,7 @@ Users can view, delete, and search their favorite quotes easily.
 
 • Remove quotes from favorites
 
-• Favorites persist even after app restart
+• Shows friendly messages when:No favorites are added.and No matching search results are found.
 
 **Navigation** 
 Uses BottomNavigationBar to switch between:Home and Favorites.
@@ -94,7 +96,8 @@ flutter run
 
 # **Home Screen**
 
-![Home](https://github.com/user-attachments/assets/4870de75-383b-40be-bed7-b17094ac8ae2)
+<img width="485" height="1019" alt="Home" src="https://github.com/user-attachments/assets/c9f65bcf-e8d7-4d0d-bd68-318b369c740e" />
+
 
 
 ### Extra Features
@@ -104,9 +107,15 @@ flutter run
 
 • Added search functionality in Favorites to filter quotes.
 
-• Bottom navigation bar for smooth navigation between Home and Favorites.
+• Users can share quotes using the share_plus package.
 
 • Unit and widget tests for core functionality.
+
+• User-Friendly Empty States - 
+
+Shows “No favourites yet” when no quotes are saved.
+
+Shows “No matching quotes” when search results are empty.
 
 
 
