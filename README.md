@@ -41,14 +41,18 @@ Model → Quote (id, text, author) ,
 State Management → Provider
 
 Folder Structure - 
+
 lib/
  ├── models/
  │    └── quote.dart
+ 
  ├── providers/
  │    └── quote_provider.dart
+ 
  ├── screens/
  │    ├── home_screen.dart
  │    └── favorite_screen.dart
+ 
  └── main.dart
 
 
