@@ -43,6 +43,7 @@ State Management → Provider
 Folder Structure - 
 
 lib/
+
  ├── models/
  │    └── quote.dart
  
